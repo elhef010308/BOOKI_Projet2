@@ -210,6 +210,117 @@ header {
     background-color: #0052d4;   /* Couleur plus foncée au survol */
 }
 
+/***** FILTRES DE RECHERCHE *****/
+.Filtres_Recherche {
+    height:50px;
+    width: 758px;
+    margin: 0 0 35px 0;
+    padding:0;
+    display:flex;
+    align-items:center;
+    flex-direction: row;
+}
+
+.Filtres {
+    color: black;
+    font-size:18px;
+    margin: 0 15px 0 0;
+    padding:5px;
+}
+
+.Boutons_Filtres {
+    display:flex;
+    justify-content:space-between;
+    width: 689px;
+    height:50px;
+}
+
+.B_Filtres1 {
+    color:black;
+    font-weight: 600;
+    font-size:17px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    width:173px;
+    height:50px;
+    border:#dbdbdb 2.5px solid;
+    background-color: white;
+    border-radius:50px;
+}
+
+.B_Filtres2 {
+    color:black;
+    font-weight: 600;
+    font-size:17px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    width:134px;
+    height:50px;
+    border:#dbdbdb 2.5px solid;
+    background-color: white;
+    border-radius:50px;
+}
+
+.B_Filtres3 {
+    color:black;
+    font-weight: 600;
+    font-size:17px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    width:170px;
+    height:50px;
+    border:#dbdbdb 2.5px solid;
+    background-color: white;
+    border-radius:50px;
+}
+
+.B_Filtres4 {
+    color:black;
+    font-weight: 600;
+    font-size:17px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    width:167px;
+    height:50px;
+    border:#dbdbdb 2.5px solid;
+    background-color: white;
+    border-radius:50px;
+}
+
+.B_Filtres1:hover {
+    background-color: #DEEBFF;
+}
+.B_Filtres2:hover {
+    background-color: #DEEBFF;
+}
+.B_Filtres3:hover {
+    background-color: #DEEBFF;
+}
+.B_Filtres4:hover {
+    background-color: #DEEBFF;
+}
+
+.B_Filtres1:focus {
+    background-color: #DEEBFF;
+}
+.B_Filtres2:focus {
+    background-color: #DEEBFF;
+}
+.B_Filtres3:focus {
+    background-color: #DEEBFF;
+}
+.B_Filtres4:focus {
+    background-color: #DEEBFF;
+}
+
 
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
@@ -345,6 +456,34 @@ header {
 
     .Bouton_Formulaire .texte {
         display: none;   /* Cache le texte */
+    }
+
+    .Filtres_Recherche {
+        display: flex;
+        flex-direction: column;     /* Aligner en colonne */
+        align-items: flex-start;    /* Aligner le contenu à gauche */
+        gap: 20px;                  /* Espacement entre chaque ligne */
+        width: 100%;                /* Prendre toute la largeur de l'écran */
+    }
+
+    .Filtres {
+        margin: 0;           /* Supprimer les marges inutiles */
+        padding: 0;          /* Supprimer les espaces internes */
+        font-size: 18px;
+        text-align: left;    /* Aligner du texte à gauche */
+    }
+
+    .Boutons_Filtres {
+        display: grid;
+        grid-template-columns: 1fr 1fr;   /* Deux boutons par ligne */
+        gap: 10px;                        /* Espacement entre les boutons */
+        width: 100%;                      /* Prendre toute la largeur de l'écran */
+    }
+
+    .B_Filtres1, .B_Filtres2, .B_Filtres3, .B_Filtres4 {
+        width: 100%;                      /* Les boutons occupent toute la largeur disponible */
+        height: 50px;                     /* Hauteur fixe des boutons */
+        justify-content: center;          /* Centrer le contenu */
     }
 
 }
