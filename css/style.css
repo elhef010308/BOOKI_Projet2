@@ -123,6 +123,94 @@ header {
 }
 
 
+/***** Pour la partie barre de recherche *****/
+.Formulaire_Recherche {
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    width:377px;
+    height:49px;
+    margin:0;
+    margin-bottom: 35px; /* Ajoute un espace de 20px sous la barre de recherche */
+    padding:20px 0px;
+    overflow: hidden;   /* Empêche les débordements */
+    background-color: white transparent;
+}
+
+.icone i {
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.4);   /* Ombre sous l'icone */
+    border: #F2F2F2 solid 0.5px;
+    border-radius: 15px 0 0 15px;
+    background-color: #F2F2F2;
+    font-size: 20px; /* Taille de l'icône */
+    color: black;  /* Couleur de l'icône */
+    width: 49px;
+    height:49px;
+} 
+
+
+.Barre_et_Bouton {
+    display:flex;
+    flex-direction:row;
+    flex:1;              /* Prendre tout l'espace restant */
+    align-items:center;  /* Aligner verticalement */
+    border: #F2F2F2 solid 0.5px;
+    border-radius : 0 15px 15px 0;
+    overflow: hidden; /* Empêche le débordement */
+}
+
+.Barre_Recherche {
+    border: none;
+    flex: 1;
+    padding: 0 15px;
+    font-size: 16px;
+    font-family: Raleway, sans-serif;
+    color: black;
+    font-weight: 700;
+    text-align: left; /* Alignement du texte à gauche */
+    outline: none;    /* Retire le contour par défaut */
+}
+
+.Barre_Recherche::placeholder {
+    color: gray;
+    font-weight: 700;
+    font-family: Raleway;
+    text-align: left; /* Alignement du texte à gauche */
+}
+
+.Bouton_Formulaire {
+    background-color:#0065FC;
+    border: #0065FC solid 0.5px ;
+    border-radius : 0 15px 15px 0;
+    color:white;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;                    /* Espacement entre texte et icône */
+    width:132px;           /* Largeur maximale*/
+    height:49px;
+}
+
+.Bouton_Formulaire i {
+    display: none;        /* Cache l'icône par défaut */
+    background-color:#0065FC;
+}
+
+.Bouton_Formulaire .texte {
+    display: inline;      /* Le texte est visible par défaut */
+    font-size:16px;
+}
+
+.Bouton_Formulaire:hover {
+    background-color: #0052d4;   /* Couleur plus foncée au survol */
+}
+
+
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
@@ -227,6 +315,36 @@ header {
 }
 
 /* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
+@media screen and (max-width: 767.98px) {
+    .Formulaire_Recherche {
+        width: 100%; /* Prend toute la largeur de l'écran sur mobile */
+        padding: 10px 0; /* Réduit les marges sur mobile */
+    }
+
+    .Barre_et_Bouton {
+        flex-direction: row; /* Garde les éléments en ligne */
+        width: 100%; /* Adapte la largeur de la barre */
+    }
+
+    .Barre_Recherche {
+        width: 100%; /* La barre de recherche prend toute la largeur de l'écran */
+        padding: 10px; /* Réduit l'espace à l'intérieur du champ de recherche */
+    }
     
+    .Bouton_Formulaire {
+        border-radius: 15px; /* Arrondi complet aux 4 coins */
+        padding: 10px; /* Réduit la taille du bouton */
+        justify-content: center; /* Centre l'icône */
+        width:50px;
+        height:49px;
+    }
+
+    .Bouton_Formulaire i {
+        display: inline-block; /* Affiche l'icône */
+    }
+
+    .Bouton_Formulaire .texte {
+        display: none;   /* Cache le texte */
+    }
+
 }
