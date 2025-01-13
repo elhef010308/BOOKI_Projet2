@@ -58,6 +58,71 @@ a {
     color: var(--main-bg-color)
 }
 
+/***** HEADER du projet *****/
+header {
+    max-height:79px;      /* Hauteur maximale */
+    width:100%;           /* Largeur maximale*/
+    background-color: white;
+    margin:0 0 50px 0;
+    padding:0 0 20px 0;
+}
+
+.HEADER {
+    display:flex;
+    justify-content: space-between;   /* Espace entre le logo et le menu */
+    align-items: center;              /* Centre verticalement les éléments */
+    margin:0;
+    padding:0;
+    max-width: 100%;                  /* Largeur maximale */
+}
+
+.HEADER img {
+    max-width: 120px;    /* Taille estimée du logo-texte */
+    height: auto;        /* Préserver les proportions */
+    position: relative;
+    top: 20px;
+    padding: 0;
+}
+
+.Menu_Du_Site {
+    display:flex;
+    text-align:right;
+    flex-direction:row;
+    gap:10px;
+    margin:0;
+    align-items:flex-start;  /* Aligner au début */
+    max-height: 35px;        /* Données de la maquette */
+    max-width: 344px;        /* Données de la maquette */
+}
+
+.Bouton_Menu {
+    background-color: white;
+    margin: 0;
+    padding: 20px 10px 10px 10px;
+    border: none;
+    border-top: 3px solid transparent;      /* Bordure invisible par défaut */
+    border-bottom: 3px solid transparent;   /* Bordure invisible par défaut */
+    font-size: 15px;                        /* Taille de la police */
+    cursor: pointer;                        /* Curseur pointeur */
+    position: relative;
+    color: black;
+    transition: color 0.3s ease, border-top-color 0.3s ease;      /* Transition fluide */
+    transition: color 0.3s ease, border-bottom-color 0.3s ease;   /* Transition fluide */
+        /* La couleur change en 3s, la bordure du haut apparait en 3s*/
+    font-family:Raleway;
+}
+
+.Bouton_Menu:hover {    /* Quand on passer avec la souris */
+    color: #0065FC;             /* Change la couleur du texte */
+    border-top-color: #0065FC;  /* Change la couleur de la bordure */
+}
+
+.Bouton_Menu:focus {    /* Quand on clique avec la souris */
+    color: #0065FC;             /* Change la couleur du texte */
+    border-top-color: #0065FC;  /* Change la couleur de la bordure */
+}
+
+
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
