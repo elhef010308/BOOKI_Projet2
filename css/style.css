@@ -58,7 +58,7 @@ a {
     color: var(--main-bg-color)
 }
 
-/***** HEADER du projet *****/
+/***** HEADER DU SITE *****/
 header {
     max-height:79px;      /* Hauteur maximale */
     width:100%;           /* Largeur maximale*/
@@ -102,7 +102,7 @@ header {
     border: none;
     border-top: 3px solid transparent;      /* Bordure invisible par défaut */
     border-bottom: 3px solid transparent;   /* Bordure invisible par défaut */
-    font-size: 15px;                        /* Taille de la police */
+    font-size: 16px;                        /* Taille de la police */
     cursor: pointer;                        /* Curseur pointeur */
     position: relative;
     color: black;
@@ -112,18 +112,39 @@ header {
     font-family:Raleway;
 }
 
-.Bouton_Menu:hover {    /* Quand on passer avec la souris */
+.Bouton_Menu:hover {              /* Quand on passer avec la souris */
     color: #0065FC;             /* Change la couleur du texte */
     border-top-color: #0065FC;  /* Change la couleur de la bordure */
 }
 
-.Bouton_Menu:focus {    /* Quand on clique avec la souris */
+.Bouton_Menu:focus {              /* Quand on clique avec la souris */
     color: #0065FC;             /* Change la couleur du texte */
     border-top-color: #0065FC;  /* Change la couleur de la bordure */
 }
 
+/***** INFOS GROUPE *****/
+.Info_Groupe {
+    padding:0;
+    margin:0;
+}
 
-/***** Pour la partie barre de recherche *****/
+.Titre_Info_Groupe {
+    padding:0;
+    margin:0;
+    line-height: 1;
+}
+
+.Titre_Info_Groupe .Titre {
+    color:black;
+    font-size:22px;
+}
+
+.Titre_Info_Groupe .P_IG {
+    color:black;
+    font-size:16px;
+}
+
+/***** BARRE DE RECHERCHE *****/
 .Formulaire_Recherche {
     display:flex;
     flex-direction: row;
@@ -131,9 +152,9 @@ header {
     width:377px;
     height:49px;
     margin:0;
-    margin-bottom: 35px; /* Ajoute un espace de 20px sous la barre de recherche */
+    margin-bottom: 35px;          /* Ajouter un espace de 20px sous la barre de recherche */
     padding:20px 0px;
-    overflow: hidden;   /* Empêche les débordements */
+    overflow: hidden;             /* Empêcher les débordements */
     background-color: white transparent;
 }
 
@@ -146,8 +167,8 @@ header {
     border: #F2F2F2 solid 0.5px;
     border-radius: 15px 0 0 15px;
     background-color: #F2F2F2;
-    font-size: 20px; /* Taille de l'icône */
-    color: black;  /* Couleur de l'icône */
+    font-size: 20px;                 /* Taille de l'icône */
+    color: black;                  /* Couleur de l'icône */
     width: 49px;
     height:49px;
 } 
@@ -156,11 +177,11 @@ header {
 .Barre_et_Bouton {
     display:flex;
     flex-direction:row;
-    flex:1;              /* Prendre tout l'espace restant */
-    align-items:center;  /* Aligner verticalement */
+    flex:1;                         /* Prendre tout l'espace restant */
+    align-items:center;             /* Aligner verticalement */
     border: #F2F2F2 solid 0.5px;
     border-radius : 0 15px 15px 0;
-    overflow: hidden; /* Empêche le débordement */
+    overflow: hidden;               /* Empêche le débordement */
 }
 
 .Barre_Recherche {
@@ -168,18 +189,18 @@ header {
     flex: 1;
     padding: 0 15px;
     font-size: 16px;
-    font-family: Raleway, sans-serif;
+    font-family: 'Raleway';
     color: black;
     font-weight: 700;
-    text-align: left; /* Alignement du texte à gauche */
-    outline: none;    /* Retire le contour par défaut */
+    text-align: left;        /* Alignement du texte à gauche */
+    outline: none;           /* Retire le contour par défaut */
 }
 
 .Barre_Recherche::placeholder {
     color: gray;
     font-weight: 700;
-    font-family: Raleway;
-    text-align: left; /* Alignement du texte à gauche */
+    font-family: 'Raleway';
+    text-align: left;         /* Alignement du texte à gauche */
 }
 
 .Bouton_Formulaire {
@@ -192,17 +213,17 @@ header {
     align-items: center;
     justify-content: center;
     gap: 0;                    /* Espacement entre texte et icône */
-    width:132px;           /* Largeur maximale*/
+    width:132px;               /* Largeur maximale*/
     height:49px;
 }
 
 .Bouton_Formulaire i {
-    display: none;        /* Cache l'icône par défaut */
+    display: none;             /* Cacher l'icône par défaut */
     background-color:#0065FC;
 }
 
 .Bouton_Formulaire .texte {
-    display: inline;      /* Le texte est visible par défaut */
+    display: inline;           /* Le texte est visible par défaut */
     font-size:16px;
 }
 
@@ -212,7 +233,7 @@ header {
 
 /***** FILTRES DE RECHERCHE *****/
 .Filtres_Recherche {
-    height:50px;
+    height:auto;
     width: 758px;
     margin: 0 0 35px 0;
     padding:0;
@@ -222,103 +243,85 @@ header {
 }
 
 .Filtres {
-    color: black;
     font-size:18px;
     margin: 0 15px 0 0;
     padding:5px;
+    font-weight: 600;
 }
 
 .Boutons_Filtres {
     display:flex;
     justify-content:space-between;
     width: 689px;
-    height:50px;
+    height:auto;
 }
 
 .B_Filtres1 {
-    color:black;
-    font-weight: 600;
-    font-size:17px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
     width:173px;
     height:50px;
-    border:#dbdbdb 2.5px solid;
-    background-color: white;
-    border-radius:50px;
 }
 
 .B_Filtres2 {
-    color:black;
-    font-weight: 600;
-    font-size:17px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
     width:134px;
     height:50px;
-    border:#dbdbdb 2.5px solid;
-    background-color: white;
-    border-radius:50px;
 }
 
 .B_Filtres3 {
-    color:black;
-    font-weight: 600;
-    font-size:17px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
     width:170px;
     height:50px;
-    border:#dbdbdb 2.5px solid;
-    background-color: white;
-    border-radius:50px;
 }
 
 .B_Filtres4 {
+    width:167px;
+    height:50px;
+
+}
+
+.B_Filtres1, .B_Filtres2, .B_Filtres3, .B_Filtres4 {
+    border:#dbdbdb 2.5px solid;
+    background-color: white;
+    border-radius:50px;
     color:black;
     font-weight: 600;
-    font-size:17px;
+    font-size:18px;
     display:flex;
     align-items:center;
     justify-content:center;
     gap:10px;
-    width:167px;
-    height:50px;
-    border:#dbdbdb 2.5px solid;
-    background-color: white;
-    border-radius:50px;
 }
 
-.B_Filtres1:hover {
-    background-color: #DEEBFF;
-}
-.B_Filtres2:hover {
-    background-color: #DEEBFF;
-}
-.B_Filtres3:hover {
-    background-color: #DEEBFF;
-}
-.B_Filtres4:hover {
+.B_Filtres1:hover, .B_Filtres2:hover, .B_Filtres3:hover, .B_Filtres4:hover, 
+.B_Filtres1:focus, .B_Filtres2:focus, .B_Filtres3:focus, .B_Filtres4:focus {
     background-color: #DEEBFF;
 }
 
-.B_Filtres1:focus {
-    background-color: #DEEBFF;
+
+/***** INFOBAR *****/
+.Infobar {
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:flex-start;
+    margin:20px 0 35px 0;;
+    padding:0;
+    height:24px;
+    width:100%;
+    gap:10px;
 }
-.B_Filtres2:focus {
-    background-color: #DEEBFF;
+
+.Infobar i {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:#dbdbdb 1.5px solid;
+    border-radius:50%;
+    height:24px;
+    width:24px;
+    font-size:14px;
 }
-.B_Filtres3:focus {
-    background-color: #DEEBFF;
-}
-.B_Filtres4:focus {
-    background-color: #DEEBFF;
+
+.Infobar p {
+    font-size:16px;
 }
 
 
