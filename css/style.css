@@ -340,74 +340,71 @@ header {
 
 /****** HÉBERGEMENTS ***********/
 .hebergements {
-    width: 871px;
-    height:614px;
-    margin: 0 40px 0 0;
-    padding:30px;
+    width: 871px;         /* Largeur */
+    height:614px;         /* Hauteur */
+    margin: 0 40px 0 0;   /* Espace avec la section "Les plus populaires" */
+    padding:30px;         /* Padding interne */
 }
 
-.Hebergement-title .Titre {
+.Hebergement-title .Titre {   /* Titre de la section "Hébergements à Marseille" */
     padding:0 0 30px 0;
     margin:0;
     font-size:22px;
 }
 
-.hebergements .H {
-    margin:0 0 30px 0;
+.hebergements .H {           /* CONTENEUR des 2 lignes de cards */
+    margin:0 0 30px 0;       
     padding: 0;
     display:flex;
-    flex-direction: column;
-    gap:30px;
+    flex-direction: column;  /* Alignement en colonne */
+    gap:30px;                /* Espace entre les lignes */
 }
 
-.Afficher_Plus {
+.Afficher_Plus {             /* TEXTE en bas de la section Hébergements à Marseille */
     font-size: 18px;
     font-weight: 700;
 }
 
-.hebergements-cards {
+.hebergements-cards {         /* Mise en forme générale d'une ligne de CARDS */
     display: flex;
     align-items:center;
     justify-content: space-between flex-start;
     width: 811px;
     height: 207.25px;
-    gap:30px;
+    gap:30px;                 /* Espace entre les cards */
   }
   
-.hebergements-cards .card {
+.hebergements-cards .card {   /* Mise en forme générale des CARDS */
     width: 250.33px;
     height: 207.25px;
     padding:5px;
     margin:0;
-    box-sizing: border-box;
+    box-sizing: border-box;   /* Ombre sous la card*/
     border-radius:20px;
   }
   
-  .hebergements-cards img {
+  .hebergements-cards img {   /* Mise en forme de l'image dans les cards */
     width: 240.33px;
     height: 124px;
-    object-fit: cover;              /* Assurer que l'image ne soit pas déformée */
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    object-fit: cover;                /* Assurer que l'image ne soit pas déformée */
+    border-top-left-radius: 20px;     /* Arrondir les coins supérieurs */
+    border-top-right-radius: 20px;    /* Arrondir les coins supérieurs */
   }
   
-  .hebergements-cards .card-content {
+  .hebergements-cards .card-content {     /* Conteneur du texte et des étoiles des cards */
     padding:0;
     position: relative;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
-  }
+    bottom: 10px;           /* Positionnement par rapport au conteneur parent */
+    left: 10px;             /* Positionnement par rapport au conteneur parent */
+    right: 10px;            /* Positionnement par rapport au conteneur parent */
+    line-height: 0.6;       /* Interligne entre le texte et les étoiles */
+}
 
-  .hebergements-cards .card-content {
-    line-height: 0.6;
-  }
-
-  .hebergements-cards .card-content .card-txt .card-title {
+  .hebergements-cards .card-content .card-txt .card-title {     /* Titre des cards */
     font-size:16px;
   }
 
-  .hebergements-cards .card-content .card-txt .card-subtitle {
+  .hebergements-cards .card-content .card-txt .card-subtitle {  /* Sous-titre des cards */
     font-size:14px;
   }
 
