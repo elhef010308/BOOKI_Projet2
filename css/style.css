@@ -1,4 +1,4 @@
-/****** General ***********/
+/****** MISE EN PAGE GÉNÉRALE ***********/
 * {
     font-family: 'Raleway', sans-serif;
 }
@@ -16,6 +16,12 @@
 body {
     display: flex;
     justify-content: center;
+}
+
+html, body {
+    margin:0;
+    padding:0;
+    width:100%;
 }
 
 .main-container {
@@ -58,10 +64,12 @@ a {
     color: var(--main-bg-color)
 }
 
-/***** HEADER DU SITE *****/
+
+    /********** HEADER **********/
+
 header {
-    max-height:79px;      /* Hauteur maximale */
-    width:100%;           /* Largeur maximale*/
+    max-height:79px;             /* Hauteur maximale */
+    width:100%;                  /* Largeur maximale*/
     background-color: white;
     margin:0 0 50px 0;
     padding:0 0 20px 0;
@@ -70,15 +78,15 @@ header {
 .HEADER {
     display:flex;
     justify-content: space-between;   /* Espace entre le logo et le menu */
-    align-items: center;              /* Centre verticalement les éléments */
+    align-items: center;              /* Centrer verticalement les éléments */
     margin:0;
     padding:0;
     max-width: 100%;                  /* Largeur maximale */
 }
 
 .HEADER img {
-    max-width: 120px;    /* Taille estimée du logo-texte */
-    height: auto;        /* Préserver les proportions */
+    max-width: 120px;       /* Taille estimée du logo-texte */
+    height: auto;           /* Préserver les proportions */
     position: relative;
     top: 20px;
     padding: 0;
@@ -86,17 +94,17 @@ header {
 
 .Menu_Du_Site {
     display:flex;
-    text-align:right;
     flex-direction:row;
     gap:10px;
     margin:0;
-    align-items:flex-start;  /* Aligner au début */
-    max-height: 35px;        /* Données de la maquette */
-    max-width: 344px;        /* Données de la maquette */
+    align-items:flex-start;    /* Aligner au début */
+    justify-content: right;
+    height: 35px;          /* Données de la maquette */
+    width: 344px;          /* Données de la maquette */
 }
 
 .Bouton_Menu {
-    background-color: white;
+    background-color:transparent;
     margin: 0;
     padding: 20px 10px 10px 10px;
     border: none;
@@ -109,7 +117,6 @@ header {
     transition: color 0.3s ease, border-top-color 0.3s ease;      /* Transition fluide */
     transition: color 0.3s ease, border-bottom-color 0.3s ease;   /* Transition fluide */
         /* La couleur change en 3s, la bordure du haut apparait en 3s*/
-    font-family:Raleway;
 }
 
 .Bouton_Menu:hover {              /* Quand on passer avec la souris */
@@ -121,6 +128,69 @@ header {
     color: #0065FC;             /* Change la couleur du texte */
     border-top-color: #0065FC;  /* Change la couleur de la bordure */
 }
+
+
+/********** MEDIA QUERIES DU HEADER **********/
+    /***** Pour les mobiles *****/
+@media screen and (max-width: 767.98px) {
+    .HEADER {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items: center;
+        padding:0;
+        margin:0;
+        flex-shrink: 0;  /* Les éléments ne peuvent pas rétrécir même si l'espace est trop petit*/
+        }
+
+    .HEADER img {
+        padding:30px 0;
+        width:100%;
+    }
+
+    .Menu_Du_Site {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 0;    /* Supprimer tout padding */
+        margin:0;     /* Supprimer les marges */
+        gap:0;
+    }
+
+    .Bouton_Menu {
+        flex: 1;             /* Les boutons prennent 50% de la largeur */
+        text-align: center;     /* Centrer le texte dans les boutons */
+        padding:30px 0;
+        margin: 0; 
+        border-bottom: 3px solid #F2F2F2;   /* Bordure visible par défaut */
+    }
+
+    .Bouton_Menu:hover {          /* Quand on passer avec la souris */
+        color: #0065FC;                
+        border-bottom-color: #0065FC; 
+        border-top: none;
+    }
+
+    .Bouton_Menu:focus {          /* Quand on clique avec la souris */
+        color: #0065FC;             
+        border-bottom-color: #0065FC; 
+        border-top: none; 
+    }
+
+    .main-container {
+        padding:0;
+    }
+
+    main {
+        padding: 50px 20px 0 20px;
+    }
+    
+}
+
+
+
 
 /***** INFOS GROUPE *****/
 .Info_Groupe {
