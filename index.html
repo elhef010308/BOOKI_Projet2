@@ -22,7 +22,10 @@
 </head>
 
 <body>
-    <div class="main-container"> 
+    <div class="main-container">
+        
+        <!-- HEADER -->
+
         <header>
             <div class="HEADER">
                 <img src="images/logo/Booki.png" alt="Logo du site">
@@ -38,26 +41,38 @@
         </header>
 
         <main>
+
+            <!-- INFO GROUPE -->
+             
             <div class="Info_Groupe">
-                <div class="Titre_Info_Groupe">
-                    <h2 class="Titre">Trouvez votre hébergement pour des vacances de rêve</h2>
-                    <p class="P_IG">En plein centre-ville ou en pleine nature</p>
+
+
+                <!-- SLOGAN -->
+
+                <div class="SLOGAN">
+                    <h1 class="Titre_Slogan">Trouvez votre hébergement pour des vacances de rêve</h1>
+                    <p class="P_Slogan">En plein centre-ville ou en pleine nature</p>
                 </div>
-                <form action="" method="get">
-                    <div class="Formulaire_Recherche">
+
+
+                <!-- FORMULAIRE DE RECHERCHE -->
+
+                <form action="#" method="post">
+                    <div class="formulaire">
+
                         <div class="icone">
                             <i class="fa-solid fa-location-dot" style="font-size: auto; color: black;"></i>
                         </div>
-                        <div class="Barre_et_Bouton">
+
+                        <div class="Saisie_et_Bouton">
                             <input 
-                                class="Barre_Recherche"
-                                type="text"
-                                title="Recherchez une destination" 
-                                name="Rechercher"
+                                class="Saisie_Recherche"
+                                type="search"
+                                title="Rechercher une destination" 
+                                name="City"
                                 placeholder="Marseille, France"
-                                aria-label="Saisissez une ville pour rechercher un hébergement"
                             >
-                            <button class="Bouton_Formulaire" type="submit" aria-label="Cliquez pour rechercher">
+                            <button class="Bouton_Recherche" type="submit" aria-label="Cliquez pour rechercher">
                                 <span class="texte">Rechercher</span>
                                 <i class="fa-solid fa-magnifying-glass" style="font-size: auto; color: white;"></i>
                             </button>
@@ -65,30 +80,33 @@
                     </div>
                 </form>
 
-                <nav class="Filtres_Recherche">
+
+                <!-- FILTRES DE RECHERCHE -->
+                    
+                <div class="Filtres_Recherche">
                     <p class="Filtres">Filtres</p>
                     <div class="Boutons_Filtres">
-                        <button class="B_Filtres1" type="button">
+                        <div class="B_Filtres1">
                             <i class="fa-solid fa-money-bill-wave"></i>
                             Économique
-                        </button>
-                    
-                        <button class="B_Filtres2" type="button">
+                        </div>
+
+                        <div class="B_Filtres2">
                             <i class="fa-solid fa-person"></i>
                             Familial
-                        </button>
-                    
-                        <button class="B_Filtres3" type="button">
+                        </div>
+                        
+                        <div class="B_Filtres3">
                             <i class="fa-solid fa-heart"></i>
                             Romantique
-                        </button>
-                    
-                        <button class="B_Filtres4" type="button">
+                        </div>
+                        
+                        <div class="B_Filtres4">
                             <i class="fa-solid fa-fire"></i>
                             Nos pépites
-                        </button>
+                        </div>
                     </div>
-                </nav>
+                </div>
                 
                 <div class="Infobar">
                     <i class="fa-solid fa-info"></i>

@@ -133,6 +133,10 @@ header {
 /********** MEDIA QUERIES DU HEADER **********/
     /***** Pour les mobiles *****/
 @media screen and (max-width: 767.98px) {
+    html, body {
+        overflow-x: hidden;
+    }
+    
     .HEADER {
         width:100%;
         height:auto;
@@ -152,7 +156,7 @@ header {
 
     .Menu_Du_Site {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         width: 100%;
         padding: 0;    /* Supprimer tout padding */
         margin:0;     /* Supprimer les marges */
@@ -160,7 +164,7 @@ header {
     }
 
     .Bouton_Menu {
-        flex: 1;             /* Les boutons prennent 50% de la largeur */
+        flex: 1;                /* Les boutons prennent 50% de la largeur */
         text-align: center;     /* Centrer le texte dans les boutons */
         padding:30px 0;
         margin: 0; 
@@ -181,51 +185,73 @@ header {
 
     .main-container {
         padding:0;
+        margin:0;
     }
 
     main {
         padding: 50px 20px 0 20px;
-    }
-    
+        margin:0;
+    } 
 }
 
 
-
-
-/***** INFOS GROUPE *****/
+/********** INFOS GROUPE **********/
 .Info_Groupe {
     padding:0;
     margin:0;
 }
 
-.Titre_Info_Groupe {
+/***** SLOGAN *****/
+.SLOGAN {
     padding:0;
     margin:0;
-    line-height: 1;
+    line-height:1;
 }
 
-.Titre_Info_Groupe .Titre {
-    color:black;
+.Titre_Slogan {
     font-size:22px;
 }
 
-.Titre_Info_Groupe .P_IG {
-    color:black;
+.P_Slogan {
     font-size:16px;
 }
 
-/***** BARRE DE RECHERCHE *****/
-.Formulaire_Recherche {
+/********** MEDIA QUERIES DU FORMULAIRE DE RECHERCHE **********/
+    /***** Pour les mobiles *****/
+@media screen and (max-width: 767.98px) {
+    .SLOGAN {
+        margin:0 20px;
+        padding:0;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        width:100%;
+        height:auto;
+        white-space: normal;    /* Faire des retours à la ligne automatiquement */
+        display: block;         /* Assurer qu'il y a un retour à la ligne */
+    }
+
+    .Titre_Slogan {
+        word-break:keep-all;    /* Ne pas couper les mots aux retours à la ligne */
+    }
+
+    .P_Slogan {
+        word-break:keep-all;    /* Ne pas couper les mots aux retours à la ligne */
+    }
+}
+
+
+/***** FORMULAIRE DE RECHERCHE *****/
+.formulaire {
     display:flex;
     flex-direction: row;
     align-items:center;
     width:377px;
     height:49px;
-    margin:0;
-    margin-bottom: 35px;          /* Ajouter un espace de 20px sous la barre de recherche */
+    margin:0 0 35px 0;
     padding:20px 0px;
-    overflow: hidden;             /* Empêcher les débordements */
-    background-color: white transparent;
+    overflow: hidden;               /* Empêcher les débordements */
+    background-color: none;
 }
 
 .icone i {
@@ -237,29 +263,26 @@ header {
     border: #F2F2F2 solid 0.5px;
     border-radius: 15px 0 0 15px;
     background-color: #F2F2F2;
-    font-size: 20px;                 /* Taille de l'icône */
-    color: black;                  /* Couleur de l'icône */
+    font-size: 20px;  
     width: 49px;
     height:49px;
 } 
 
-
-.Barre_et_Bouton {
+.Saisie_et_Bouton {
     display:flex;
     flex-direction:row;
-    flex:1;                         /* Prendre tout l'espace restant */
     align-items:center;             /* Aligner verticalement */
     border: #F2F2F2 solid 0.5px;
     border-radius : 0 15px 15px 0;
     overflow: hidden;               /* Empêche le débordement */
 }
 
-.Barre_Recherche {
+.Saisie_Recherche {
     border: none;
-    flex: 1;
-    padding: 0 15px;
-    font-size: 16px;
-    font-family: 'Raleway';
+    padding-left:15px;
+    font-size: 18px;
+    width:190px;
+    height:49px;
     color: black;
     font-weight: 700;
     text-align: left;        /* Alignement du texte à gauche */
@@ -268,12 +291,11 @@ header {
 
 .Barre_Recherche::placeholder {
     color: gray;
-    font-weight: 700;
-    font-family: 'Raleway';
     text-align: left;         /* Alignement du texte à gauche */
+    padding-left:15px;
 }
 
-.Bouton_Formulaire {
+.Bouton_Recherche {
     background-color:#0065FC;
     border: #0065FC solid 0.5px ;
     border-radius : 0 15px 15px 0;
@@ -287,19 +309,60 @@ header {
     height:49px;
 }
 
-.Bouton_Formulaire i {
+.Bouton_Recherche i {
     display: none;             /* Cacher l'icône par défaut */
     background-color:#0065FC;
 }
 
-.Bouton_Formulaire .texte {
+.Bouton_Recherche .texte {
     display: inline;           /* Le texte est visible par défaut */
-    font-size:16px;
+    font-size:18px;
 }
 
-.Bouton_Formulaire:hover {
+.Bouton_Recherche:hover {
     background-color: #0052d4;   /* Couleur plus foncée au survol */
 }
+
+/********** MEDIA QUERIES DU FORMULAIRE DE RECHERCHE **********/
+    /***** Pour les mobiles *****/
+@media screen and (max-width: 767.98px) {
+    .formulaire {
+        width: 100%;      /* Prend toute la largeur de l'écran sur mobile */
+        padding:35px 0;   /* Réduit les marges sur mobile */
+        margin:0;
+    }
+
+    .Saisie_et_Bouton {
+        flex-direction: row;     /* Garde les éléments en ligne */
+        width: 100%;             /* Adapte la largeur de la barre */
+    }
+
+    .Saisie_Recherche {
+        width: 100%;     /* La barre de recherche prend toute la largeur de l'écran */
+        padding: 0 20px;   /* Réduit l'espace à l'intérieur du champ de recherche */
+    }
+    
+    .Bouton_Recherche {
+        border-radius: 15px;       /* Arrondi complet aux 4 coins */
+        padding: 10px;             /* Réduit la taille du bouton */
+        justify-content: center;   /* Centre l'icône */
+        width:50px;
+        height:49px;
+    }
+
+    .Bouton_Recherche i {
+        display: inline-block;      /* Affiche l'icône */
+    }
+
+    .Bouton_Recherche .texte {
+        display: none;              /* Cache le texte */
+    }
+
+    .icone i {
+        box-shadow: none;
+    }
+}
+
 
 /***** FILTRES DE RECHERCHE *****/
 .Filtres_Recherche {
@@ -310,6 +373,7 @@ header {
     display:flex;
     align-items:center;
     flex-direction: row;
+    position:relative;
 }
 
 .Filtres {
@@ -324,6 +388,7 @@ header {
     justify-content:space-between;
     width: 689px;
     height:auto;
+    gap:15px;
 }
 
 .B_Filtres1 {
@@ -365,6 +430,56 @@ header {
     background-color: #DEEBFF;
 }
 
+/********** MEDIA QUERIES DU FORMULAIRE DE RECHERCHE **********/
+    /***** Pour les tablettes *****/
+@media (max-width: 1024px) {
+    .Filtres_Recherche {
+        flex-direction: column;    /* Disposer les éléments en colonne */
+        align-items: flex-start;   /* Aligner les éléments à gauche */
+    }
+    
+    .Filtres {
+        margin-bottom: 10px;       /* Ajouter un peu d'espace sous le texte "Filtres" */
+    }
+    
+    .Boutons_Filtres {
+        display: flex;         /* Garder les boutons en ligne */
+        flex-wrap: nowrap;     /* Interdir aux boutons de se décomposer en plusieurs lignes* */
+        gap: 10px;             /* Espacement entre les boutons */
+    }
+}
+
+    /***** Pour les mobiles *****/
+@media screen and (max-width: 767.98px) {
+    .Filtres_Recherche {
+        display: flex;
+        flex-direction: column;     /* Aligner en colonne */
+        align-items: flex-start;    /* Aligner le contenu à gauche */
+        gap: 20px;                  /* Espacement entre chaque ligne */
+        width: 100%;                /* Prendre toute la largeur de l'écran */
+    }
+
+    .Filtres {
+        margin: 0;           /* Supprimer les marges inutiles */
+        padding: 0;          /* Supprimer les espaces internes */
+        font-size: 18px;
+        text-align: left;    /* Aligner du texte à gauche */
+    }
+
+    .Boutons_Filtres {
+        display: grid;
+        grid-template-columns: 1fr 1fr;   /* Deux boutons par ligne */
+        gap: 10px;                        /* Espacement entre les boutons */
+        width: 100%;                      /* Prendre toute la largeur de l'écran */
+    }
+
+    .B_Filtres1, .B_Filtres2, .B_Filtres3, .B_Filtres4 {
+        width: 100%;                      /* Les boutons occupent toute la largeur disponible */
+        height: 50px;                     /* Hauteur fixe des boutons */
+        justify-content: center;          /* Centrer le contenu */
+    }
+}
+
 
 /***** INFOBAR *****/
 .Infobar {
@@ -388,11 +503,13 @@ header {
     height:24px;
     width:24px;
     font-size:14px;
+    flex-shrink: 0;   /* Empêche l'icône de rétrécir avec le conteneur */
 }
 
 .Infobar p {
     font-size:16px;
 }
+
 
 
 /****** Hebergements And Populaires ***********/
@@ -564,64 +681,3 @@ header {
 }
 
 /* Small devices (phones, less than 768px) */
-@media screen and (max-width: 767.98px) {
-    .Formulaire_Recherche {
-        width: 100%; /* Prend toute la largeur de l'écran sur mobile */
-        padding: 10px 0; /* Réduit les marges sur mobile */
-    }
-
-    .Barre_et_Bouton {
-        flex-direction: row; /* Garde les éléments en ligne */
-        width: 100%; /* Adapte la largeur de la barre */
-    }
-
-    .Barre_Recherche {
-        width: 100%; /* La barre de recherche prend toute la largeur de l'écran */
-        padding: 10px; /* Réduit l'espace à l'intérieur du champ de recherche */
-    }
-    
-    .Bouton_Formulaire {
-        border-radius: 15px; /* Arrondi complet aux 4 coins */
-        padding: 10px; /* Réduit la taille du bouton */
-        justify-content: center; /* Centre l'icône */
-        width:50px;
-        height:49px;
-    }
-
-    .Bouton_Formulaire i {
-        display: inline-block; /* Affiche l'icône */
-    }
-
-    .Bouton_Formulaire .texte {
-        display: none;   /* Cache le texte */
-    }
-
-    .Filtres_Recherche {
-        display: flex;
-        flex-direction: column;     /* Aligner en colonne */
-        align-items: flex-start;    /* Aligner le contenu à gauche */
-        gap: 20px;                  /* Espacement entre chaque ligne */
-        width: 100%;                /* Prendre toute la largeur de l'écran */
-    }
-
-    .Filtres {
-        margin: 0;           /* Supprimer les marges inutiles */
-        padding: 0;          /* Supprimer les espaces internes */
-        font-size: 18px;
-        text-align: left;    /* Aligner du texte à gauche */
-    }
-
-    .Boutons_Filtres {
-        display: grid;
-        grid-template-columns: 1fr 1fr;   /* Deux boutons par ligne */
-        gap: 10px;                        /* Espacement entre les boutons */
-        width: 100%;                      /* Prendre toute la largeur de l'écran */
-    }
-
-    .B_Filtres1, .B_Filtres2, .B_Filtres3, .B_Filtres4 {
-        width: 100%;                      /* Les boutons occupent toute la largeur disponible */
-        height: 50px;                     /* Hauteur fixe des boutons */
-        justify-content: center;          /* Centrer le contenu */
-    }
-
-}
