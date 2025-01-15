@@ -430,7 +430,8 @@ header {
     background-color: #DEEBFF;
 }
 
-/********** MEDIA QUERIES DU FORMULAIRE DE RECHERCHE **********/
+
+/********** MEDIA QUERIES DES FILTRES DE RECHERCHE **********/
     /***** Pour les tablettes *****/
 @media (max-width: 1024px) {
     .Filtres_Recherche {
@@ -515,6 +516,7 @@ header {
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
 }
 
 .hebergements-and-populaires section {
@@ -587,26 +589,19 @@ header {
     font-size:14px;
 }
   
-.Afficher_Plus {             /* TEXTE en bas de la section Hébergements à Marseille */
+.Afficher_Plus {     /* TEXTE en bas de la section Hébergements à Marseille */
     font-size: 18px;
     font-weight: 700;
     padding: 0 0 30px 0;
 }
 
-.card_hotel .card:hover {      /* Quand on survole une CARD */
+.card_hotel .card:hover {      /* Quand on survole une carte */
     transform: scale(1.05);    /* Zoom légèrement la carte (5% de sa taille) */
 }
 
 
 
-
-
-
-
-
-
-
-/****** Populaires ***********/
+/***** POPULAIRES *****/
 .populaires {
     width: 32%;
 }
@@ -651,24 +646,26 @@ header {
     margin-bottom: 5px;
 }
 
+.populaires-cards .card:hover {    /* Quand on survole une carte */
+    transform: scale(1.05);        /* Zoom légèrement la carte (5% de sa taille) */
+}
 
 
-
-/* Le code ci-dessous correspond à la version responsive uniquement */
-
-/****** Media queries ***********/
-/* Medium devices (tablets, less/equal than 1024px) */
-@media (max-width: 1024px) {
+/********** MEDIA QUERIES DU HEBERGEMENTS ET POPULAIRES **********/
+    /***** Pour les tablettes *****/
+@media screen and (min-width:768px) and (max-width: 1025px) {
     .hebergements-and-populaires {
-        flex-direction: column;
+        flex-direction: column;   /* Empile les sections */
     }
 
     .hebergements {
-        width: 100%;
+        width: 100%;         /* Chaque section occupe toute la largeur */
+        max-width: none;     /* Supprime la limite maximale pour les écrans plus petits */
     }
 
     .populaires {
-        width: 100%;
+        width: 100%;        /* Chaque section occupe toute la largeur */
+        max-width: none;    /* Supprime la limite maximale */
         margin-top: 50px;
     }
 
@@ -691,4 +688,48 @@ header {
     }
 }
 
-/* Small devices (phones, less than 768px) */
+    /***** Pour les mobiles *****/
+@media screen and (max-width: 767.98px) {
+    .hebergements-and-populaires {
+        flex-direction: column;   /* Empile les sections */
+    }
+
+    .hebergements {
+        order:2;
+        flex-direction: column;
+        width: 100%;         /* Chaque section occupe toute la largeur */
+        max-width: none;     /* Supprime la limite maximale pour les écrans plus petits */
+        height:100%;
+        max-height:2019.5px;
+        padding:20px;
+        margin:0;
+    }
+
+    .populaires {
+        order:1;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;        /* Chaque section occupe toute la largeur */
+        max-width: none;    /* Supprime la limite maximale */
+        margin-top: 35px;
+        margin-bottom:15px;
+    }
+
+    .card_hotel {
+        display: flex;
+        flex-direction: column;
+        width:100%;
+        height:auto;
+        gap:15px;
+    }
+
+    .card_hotel .card {
+        width:100%;
+        flex: 1 1 100%;
+    }
+
+    .Afficher_Plus {
+        padding:0;
+        margin:0;
+    }
+}
