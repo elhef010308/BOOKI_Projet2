@@ -733,3 +733,69 @@ header {
         margin:0;
     }
 }
+
+
+/********** ACTIVITÉS A MARSEILLE **********/
+.Activites_Marseille {
+    width:100%;
+    max-width:1340px;
+    height:559px;
+    display:flex;
+    flex-direction: column;
+    padding:0;
+    margin: 35px 0 0 0;
+}
+
+.Activites_Marseille h2 {
+    font-size: 22px;
+    text-align: left;
+    margin:0 0 30px 0;
+    padding:0;
+}
+
+.Cartes_Activites {
+    display:flex;
+    flex-direction: row;
+    width: 100%;             /* Utilise toute la largeur disponible */
+    max-width: 1280px;       /* Limite la largeur maximale */
+    height: 439px;
+    padding: 0;
+    margin: 0 auto;          /* Centre le conteneur */
+    gap: 30px;
+    overflow: visible;       /* Empêche les débordements visuels */
+}
+
+.activites_cards {
+    flex: 1 1 297.5px;           /* Fixe la largeur de chaque carte */
+    max-width: 297.5px;          /* Limite la largeur des cartes */
+    box-sizing: border-box;      /* Assure que les marges internes et bordures sont incluses */
+    padding:0;
+    margin:0;
+}
+
+.activites_cards .card {
+    height:439px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding:0;
+}
+
+.activites_cards .card img {
+    width:100%;
+    max-width: 297.5px;
+    height:380px;
+    object-fit: cover;
+    border-top-left-radius:20px;
+    border-top-right-radius:20px;
+}
+
+.activites_cards .card h3 {
+    height: 59px;               /* Hauteur fixe pour le titre */
+    padding: 0 19px;
+    width: 100%;
+    font-size:16px;
+}
+
+.activites_cards .card:hover {    /* Quand on survole une carte */
+    transform: scale(1.05);        /* Zoom légèrement la carte (5% de sa taille) */
+}
