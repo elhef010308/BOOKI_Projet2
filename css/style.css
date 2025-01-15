@@ -600,7 +600,6 @@ header {
 }
 
 
-
 /***** POPULAIRES *****/
 .populaires {
     width: 32%;
@@ -653,7 +652,7 @@ header {
 
 /********** MEDIA QUERIES DU HEBERGEMENTS ET POPULAIRES **********/
     /***** Pour les tablettes *****/
-@media screen and (min-width:768px) and (max-width: 1025px) {
+@media screen and (min-width:767px) and (max-width: 1025px) {
     .hebergements-and-populaires {
         flex-direction: column;   /* Empile les sections */
     }
