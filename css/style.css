@@ -68,19 +68,16 @@ a {
     /********** HEADER **********/
 
 header {
-    max-height:79px;             /* Hauteur maximale */
+    height:79px;             /* Hauteur maximale */
     width:100%;                  /* Largeur maximale*/
     background-color: white;
-    margin:0 0 50px 0;
-    padding:0 0 20px 0;
+    margin:0 0 50px 0;    
 }
 
 .HEADER {
     display:flex;
     justify-content: space-between;   /* Espace entre le logo et le menu */
     align-items: center;              /* Centrer verticalement les éléments */
-    margin:0;
-    padding:0;
     max-width: 100%;                  /* Largeur maximale */
 }
 
@@ -89,7 +86,6 @@ header {
     height: auto;           /* Préserver les proportions */
     position: relative;
     top: 20px;
-    padding: 0;
 }
 
 .Menu_Du_Site {
@@ -97,10 +93,7 @@ header {
     flex-direction:row;
     gap:10px;
     margin:0;
-    align-items:flex-start;    /* Aligner au début */
     justify-content: right;
-    height: 35px;          /* Données de la maquette */
-    width: 344px;          /* Données de la maquette */
 }
 
 .Bouton_Menu {
@@ -113,7 +106,6 @@ header {
     font-size: 16px;                        /* Taille de la police */
     cursor: pointer;                        /* Curseur pointeur */
     position: relative;
-    color: black;
     transition: color 0.3s ease, border-top-color 0.3s ease;      /* Transition fluide */
     transition: color 0.3s ease, border-bottom-color 0.3s ease;   /* Transition fluide */
         /* La couleur change en 3s, la bordure du haut apparait en 3s*/
@@ -144,8 +136,6 @@ header {
         flex-direction:column;
         justify-content:center;
         align-items: center;
-        padding:0;
-        margin:0;
         flex-shrink: 0;  /* Les éléments ne peuvent pas rétrécir même si l'espace est trop petit*/
         }
 
@@ -159,7 +149,7 @@ header {
         justify-content: space-between;
         width: 100%;
         padding: 0;    /* Supprimer tout padding */
-        margin:0;     /* Supprimer les marges */
+        margin:0;      /* Supprimer les marges */
         gap:0;
     }
 
@@ -183,6 +173,10 @@ header {
         border-top: none; 
     }
 
+    body {
+        width:100%;
+    }
+
     .main-container {
         padding:0;
         margin:0;
@@ -196,11 +190,6 @@ header {
 
 
     /********** INFOS GROUPE **********/
-.Info_Groupe {
-    padding:0;
-    margin:0;
-}
-
 /***** SLOGAN *****/
 .SLOGAN {
     padding:0;
@@ -218,15 +207,12 @@ header {
 
 /********** MEDIA QUERIES DU SLOGAN  **********/
     /***** Pour les mobiles *****/
-@media screen and (max-width: 767.98px) {
+@media screen and (max-width: 767.98px) {    
     .SLOGAN {
-        margin:0 20px;
-        padding:0;
+        margin: 30px 0 0 0;
         display:flex;
         flex-direction: column;
         justify-content: center;
-        width:100%;
-        height:auto;
         white-space: normal;    /* Faire des retours à la ligne automatiquement */
         display: block;         /* Assurer qu'il y a un retour à la ligne */
     }
@@ -310,12 +296,12 @@ header {
 }
 
 .Bouton_Recherche i {
-    display: none;             /* Cacher l'icône par défaut */
+    display: none;                 /* Cacher l'icône par défaut */
     background-color:#0065FC;
 }
 
 .Bouton_Recherche .texte {
-    display: inline;           /* Le texte est visible par défaut */
+    display: inline;               /* Le texte est visible par défaut */
     font-size:18px;
 }
 
@@ -367,7 +353,7 @@ header {
 /***** FILTRES DE RECHERCHE *****/
 .Filtres_Recherche {
     height:auto;
-    width: 758px;
+    width: 100%;
     margin: 0 0 35px 0;
     padding:0;
     display:flex;
@@ -386,29 +372,24 @@ header {
 .Boutons_Filtres {
     display:flex;
     justify-content:space-between;
-    width: 689px;
     height:auto;
     gap:15px;
 }
 
 .B_Filtres1 {
     width:173px;
-    height:50px;
 }
 
 .B_Filtres2 {
     width:134px;
-    height:50px;
 }
 
 .B_Filtres3 {
     width:170px;
-    height:50px;
 }
 
 .B_Filtres4 {
     width:167px;
-    height:50px;
 
 }
 
@@ -416,13 +397,13 @@ header {
     border:#dbdbdb 2.5px solid;
     background-color: white;
     border-radius:50px;
-    color:black;
     font-weight: 600;
     font-size:18px;
     display:flex;
     align-items:center;
     justify-content:center;
     gap:10px;
+    height: 50px;
 }
 
 .B_Filtres1:hover, .B_Filtres2:hover, .B_Filtres3:hover, .B_Filtres4:hover, 
@@ -440,7 +421,7 @@ header {
     }
     
     .Filtres {
-        margin-bottom: 10px;       /* Ajouter un peu d'espace sous le texte "Filtres" */
+        margin: 0 0 15px 0;       /* Ajouter un peu d'espace sous le texte "Filtres" */
     }
     
     .Boutons_Filtres {
@@ -520,7 +501,6 @@ header {
 }
 
 .hebergements-and-populaires section {
-    background-color: var(--main-bg-color);
     border-radius: 20px;
     padding: 30px;
     box-sizing: border-box;
@@ -529,12 +509,11 @@ header {
 
 /***** HÉBERGEMENTS A MARSEILLE*****/
 .hebergements {
+    background-color: var(--main-bg-color);
     width:65%;
     max-width:871px;
     height:100%;
-    max-height: 614px;
     margin: 0 40px 0 0;
-    padding: 30px;
 }
 
 .hebergements h2 {
@@ -552,13 +531,13 @@ header {
     width: 100%;
     max-width: 811px;
     gap:30px;
-    margin: 0 0 30px 0;
+    margin:0 0 30px 0;
 }
 
 .card_hotel .card {
-    flex: 1 1 calc(33.333% - 30px); /* Chaque carte occupe 1/3 moins un ajustement pour le gap */
+    flex: 1 1 calc(33.333% - 30px);   /* Chaque carte occupe 1/3 moins un ajustement pour le gap */
     width: calc((811px / 3) - 60px);
-    max-height:207.25px;
+    height:207.25px;
     padding:5px;
     margin: 0;
     border-radius:20px;
@@ -589,10 +568,10 @@ header {
     font-size:14px;
 }
   
-.Afficher_Plus {     /* TEXTE en bas de la section Hébergements à Marseille */
+.Afficher_Plus {       /* TEXTE en bas de la section Hébergements à Marseille */
     font-size: 18px;
     font-weight: 700;
-    padding: 0 0 30px 0;
+    margin:0;
 }
 
 .card_hotel .card:hover {      /* Quand on survole une carte */
@@ -602,6 +581,7 @@ header {
 
 /***** POPULAIRES *****/
 .populaires {
+    background-color: var(--main-bg-color);
     width: 32%;
 }
 
@@ -652,9 +632,9 @@ header {
 
 /********** MEDIA QUERIES DU HEBERGEMENTS ET POPULAIRES **********/
     /***** Pour les tablettes *****/
-@media screen and (min-width:767px) and (max-width: 1025px) {
+@media screen and (min-width:767.98px) and (max-width: 1025px) {
     .hebergements-and-populaires {
-        flex-direction: column;   /* Empile les sections */
+        flex-direction: column;      /* Empile les sections */
     }
 
     .hebergements {
@@ -690,10 +670,24 @@ header {
     /***** Pour les mobiles *****/
 @media screen and (max-width: 767.98px) {
     .hebergements-and-populaires {
-        flex-direction: column;   /* Empile les sections */
+        flex-direction: column;      /* Empile les sections */
+        margin-left: -20px;          /* Supprimer le padding de MAIN en version mobile */
+        margin-right: -20px;         /* Supprimer le padding de MAIN en version mobile */
+        width: calc(100% + 40px);    /* Ajuster les marges négatives */
+    }
+
+    .hebergements-and-populaires section {
+        border-radius: 0;
+        padding: 30px;
+        box-sizing: border-box;
+    }
+
+    main .hebergements-and-populaires {
+        padding:0;
     }
 
     .hebergements {
+        background-color: transparent;
         order:2;
         flex-direction: column;
         width: 100%;         /* Chaque section occupe toute la largeur */
@@ -736,13 +730,10 @@ header {
 
 /********** ACTIVITÉS A MARSEILLE **********/
 .Activites_Marseille {
-    width:100%;
-    max-width:1340px;
-    height:559px;
     display:flex;
     flex-direction: column;
-    padding:0;
-    margin: 35px 0 0 0;
+    padding:30px 0;
+    margin: 35px 0;
 }
 
 .Activites_Marseille h2 {
@@ -754,22 +745,16 @@ header {
 
 .Cartes_Activites {
     display:flex;
-    flex-direction: row;
-    width: 100%;             /* Utilise toute la largeur disponible */
-    max-width: 1280px;       /* Limite la largeur maximale */
+    gap:30px;
     height: 439px;
-    padding: 0;
-    margin: 0 auto;          /* Centre le conteneur */
-    gap: 30px;
     overflow: visible;       /* Empêche les débordements visuels */
 }
 
 .activites_cards {
-    flex: 1 1 297.5px;           /* Fixe la largeur de chaque carte */
-    max-width: 297.5px;          /* Limite la largeur des cartes */
-    box-sizing: border-box;      /* Assure que les marges internes et bordures sont incluses */
-    padding:0;
-    margin:0;
+    display:flex;
+    flex-direction: column;
+    border-radius:20px;
+    flex:1;
 }
 
 .activites_cards .card {
@@ -781,7 +766,6 @@ header {
 
 .activites_cards .card img {
     width:100%;
-    max-width: 297.5px;
     height:380px;
     object-fit: cover;
     border-top-left-radius:20px;
@@ -789,12 +773,64 @@ header {
 }
 
 .activites_cards .card h3 {
-    height: 59px;               /* Hauteur fixe pour le titre */
     padding: 0 19px;
-    width: 100%;
     font-size:16px;
 }
 
-.activites_cards .card:hover {    /* Quand on survole une carte */
+.activites_cards .card:hover {     /* Quand on survole une carte */
     transform: scale(1.05);        /* Zoom légèrement la carte (5% de sa taille) */
 }
+
+
+/********** MEDIA QUERIES DES ACTIVITÉS A MARSEILLE **********/
+    /***** Pour les tablettes *****/
+@media screen and (min-width:767.98px) and (max-width: 1025px) {
+    .Activites_Marseille {
+        padding:30px;
+        margin:35px 0;
+    }
+
+    .activites_cards .card {
+        width:100%;
+        height:270px;
+    }
+
+    .activites_cards .card img {
+        height:200px;
+    }
+
+    .Cartes_Activites {
+        width: 100%;         /* Chaque section occupe toute la largeur */
+        max-width: none;     /* Supprime la limite maximale pour les écrans plus petits */
+        margin:0;
+        gap:30px;
+        height:auto;
+    }
+}
+
+    /***** Pour les mobiles *****/
+@media screen and (max-width: 767.98px) {
+    .Activites_Marseille {
+        padding:30px;
+        margin:35px 0;
+    }
+    
+    .Cartes_Activites {
+        flex-direction: column;
+        width: 100%;         /* Chaque section occupe toute la largeur */
+        max-width: none;     /* Supprime la limite maximale pour les écrans plus petits */
+        margin:0;
+        gap:15px;
+        height:auto;
+    }
+
+    .activites_cards .card {
+        width:100%;
+        height:200px;
+    }
+
+    .activites_cards .card img {
+        height:141px;
+    }
+}
+
