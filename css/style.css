@@ -834,3 +834,42 @@ header {
     }
 }
 
+
+/********** FOOTER **********/
+footer {
+    display:flex;
+    justify-content:flex-start;
+    text-align: start;
+    width:100%;
+    background-color: #F2F2F2;
+}
+
+footer h2 {
+    font-size:18px;
+    white-space : nowrap;
+}
+
+footer ul {
+    line-height:2;
+    font-size:16px;
+    margin:0;
+    padding:0;
+}
+
+footer li {
+    list-style-type: none;
+    white-space : nowrap;
+}
+
+.A_Propos, .Nos_Hebergements, .Assistance {
+    width: calc(100%/3);
+    padding:20px 0 20px 30px;
+}
+
+/********** MEDIA QUERIES DES ACTIVITÉS A MARSEILLE **********/
+    /***** Pour les mobiles *****/
+@media screen and (max-width: 767.98px) {
+    footer {
+        flex-direction: column;
+    }
+}
