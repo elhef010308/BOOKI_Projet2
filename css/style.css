@@ -20,7 +20,6 @@ body {
 
 html, body {
     margin:0;
-    padding:0;
     width:100%;
 }
 
@@ -28,7 +27,6 @@ html, body {
     width: 100%;
     max-width: 1440px;
     padding: 0 50px;
-    box-sizing: border-box;
 }
 
 a {
@@ -68,22 +66,21 @@ a {
     /********** HEADER **********/
 
 header {
-    height:79px;             /* Hauteur maximale */
-    width:100%;                  /* Largeur maximale*/
+    height:79px;                
+    width:100%;                 
     background-color: white;
     margin:0 0 50px 0;    
 }
 
 .HEADER {
     display:flex;
-    justify-content: space-between;   /* Espace entre le logo et le menu */
+    justify-content: space-between;   /* Espacement entre le logo et le menu */
     align-items: center;              /* Centrer verticalement les éléments */
-    max-width: 100%;                  /* Largeur maximale */
 }
 
 .HEADER img {
-    max-width: 120px;       /* Taille estimée du logo-texte */
-    height: auto;           /* Préserver les proportions */
+    max-width: 79px;       
+    height: auto;          /* Préserver les proportions */
     position: relative;
     top: 20px;
 }
@@ -98,13 +95,11 @@ header {
 
 .Bouton_Menu {
     background-color:transparent;
-    margin: 0;
     padding: 20px 10px 10px 10px;
     border: none;
     border-top: 3px solid transparent;      /* Bordure invisible par défaut */
     border-bottom: 3px solid transparent;   /* Bordure invisible par défaut */
-    font-size: 16px;                        /* Taille de la police */
-    cursor: pointer;                        /* Curseur pointeur */
+    font-size: 16px;                        
     position: relative;
     transition: color 0.3s ease, border-top-color 0.3s ease;      /* Transition fluide */
     transition: color 0.3s ease, border-bottom-color 0.3s ease;   /* Transition fluide */
@@ -122,78 +117,9 @@ header {
 }
 
 
-/********** MEDIA QUERIES DU HEADER **********/
-    /***** Pour les mobiles *****/
-@media screen and (max-width: 767.98px) {
-    html, body {
-        overflow-x: hidden;
-    }
-    
-    .HEADER {
-        width:100%;
-        height:auto;
-        display:flex;
-        flex-direction:column;
-        justify-content:center;
-        align-items: center;
-        flex-shrink: 0;  /* Les éléments ne peuvent pas rétrécir même si l'espace est trop petit*/
-        }
-
-    .HEADER img {
-        padding:30px 0;
-        width:100%;
-    }
-
-    .Menu_Du_Site {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        padding: 0;    /* Supprimer tout padding */
-        margin:0;      /* Supprimer les marges */
-        gap:0;
-    }
-
-    .Bouton_Menu {
-        flex: 1;                /* Les boutons prennent 50% de la largeur */
-        text-align: center;     /* Centrer le texte dans les boutons */
-        padding:30px 0;
-        margin: 0; 
-        border-bottom: 3px solid #F2F2F2;   /* Bordure visible par défaut */
-    }
-
-    .Bouton_Menu:hover {          /* Quand on passer avec la souris */
-        color: #0065FC;                
-        border-bottom-color: #0065FC; 
-        border-top: none;
-    }
-
-    .Bouton_Menu:focus {          /* Quand on clique avec la souris */
-        color: #0065FC;             
-        border-bottom-color: #0065FC; 
-        border-top: none; 
-    }
-
-    body {
-        width:100%;
-    }
-
-    .main-container {
-        padding:0;
-        margin:0;
-    }
-
-    main {
-        padding: 50px 20px 0 20px;
-        margin:0;
-    } 
-}
-
-
     /********** INFOS GROUPE **********/
 /***** SLOGAN *****/
 .SLOGAN {
-    padding:0;
-    margin:0;
     line-height:1;
 }
 
@@ -205,38 +131,15 @@ header {
     font-size:16px;
 }
 
-/********** MEDIA QUERIES DU SLOGAN  **********/
-    /***** Pour les mobiles *****/
-@media screen and (max-width: 767.98px) {    
-    .SLOGAN {
-        margin: 30px 0 0 0;
-        display:flex;
-        flex-direction: column;
-        justify-content: center;
-        white-space: normal;    /* Faire des retours à la ligne automatiquement */
-        display: block;         /* Assurer qu'il y a un retour à la ligne */
-    }
-
-    .Titre_Slogan {
-        word-break:keep-all;    /* Ne pas couper les mots aux retours à la ligne */
-    }
-
-    .P_Slogan {
-        word-break:keep-all;    /* Ne pas couper les mots aux retours à la ligne */
-    }
-}
-
 
 /***** FORMULAIRE DE RECHERCHE *****/
 .formulaire {
     display:flex;
     flex-direction: row;
     align-items:center;
-    width:377px;
     height:49px;
     margin:0 0 35px 0;
     padding:20px 0px;
-    overflow: hidden;               /* Empêcher les débordements */
     background-color: none;
 }
 
@@ -260,7 +163,6 @@ header {
     align-items:center;             /* Aligner verticalement */
     border: #F2F2F2 solid 0.5px;
     border-radius : 0 15px 15px 0;
-    overflow: hidden;               /* Empêche le débordement */
 }
 
 .Saisie_Recherche {
@@ -309,46 +211,6 @@ header {
     background-color: #0052d4;   /* Couleur plus foncée au survol */
 }
 
-/********** MEDIA QUERIES DU FORMULAIRE DE RECHERCHE **********/
-    /***** Pour les mobiles *****/
-@media screen and (max-width: 767.98px) {
-    .formulaire {
-        width: 100%;      /* Prend toute la largeur de l'écran sur mobile */
-        padding:35px 0;   /* Réduit les marges sur mobile */
-        margin:0;
-    }
-
-    .Saisie_et_Bouton {
-        flex-direction: row;     /* Garde les éléments en ligne */
-        width: 100%;             /* Adapte la largeur de la barre */
-    }
-
-    .Saisie_Recherche {
-        width: 100%;     /* La barre de recherche prend toute la largeur de l'écran */
-        padding: 0 20px;   /* Réduit l'espace à l'intérieur du champ de recherche */
-    }
-    
-    .Bouton_Recherche {
-        border-radius: 15px;       /* Arrondi complet aux 4 coins */
-        padding: 10px;             /* Réduit la taille du bouton */
-        justify-content: center;   /* Centre l'icône */
-        width:50px;
-        height:49px;
-    }
-
-    .Bouton_Recherche i {
-        display: inline-block;      /* Affiche l'icône */
-    }
-
-    .Bouton_Recherche .texte {
-        display: none;              /* Cache le texte */
-    }
-
-    .icone i {
-        box-shadow: none;
-    }
-}
-
 
 /***** FILTRES DE RECHERCHE *****/
 .Filtres_Recherche {
@@ -365,7 +227,6 @@ header {
 .Filtres {
     font-size:18px;
     margin: 0 15px 0 0;
-    padding:5px;
     font-weight: 600;
 }
 
@@ -409,57 +270,6 @@ header {
 .B_Filtres1:hover, .B_Filtres2:hover, .B_Filtres3:hover, .B_Filtres4:hover, 
 .B_Filtres1:focus, .B_Filtres2:focus, .B_Filtres3:focus, .B_Filtres4:focus {
     background-color: #DEEBFF;
-}
-
-
-/********** MEDIA QUERIES DES FILTRES DE RECHERCHE **********/
-    /***** Pour les tablettes *****/
-@media (max-width: 1024px) {
-    .Filtres_Recherche {
-        flex-direction: column;    /* Disposer les éléments en colonne */
-        align-items: flex-start;   /* Aligner les éléments à gauche */
-    }
-    
-    .Filtres {
-        margin: 0 0 15px 0;       /* Ajouter un peu d'espace sous le texte "Filtres" */
-    }
-    
-    .Boutons_Filtres {
-        display: flex;         /* Garder les boutons en ligne */
-        flex-wrap: nowrap;     /* Interdir aux boutons de se décomposer en plusieurs lignes* */
-        gap: 10px;             /* Espacement entre les boutons */
-    }
-}
-
-    /***** Pour les mobiles *****/
-@media screen and (max-width: 767.98px) {
-    .Filtres_Recherche {
-        display: flex;
-        flex-direction: column;     /* Aligner en colonne */
-        align-items: flex-start;    /* Aligner le contenu à gauche */
-        gap: 20px;                  /* Espacement entre chaque ligne */
-        width: 100%;                /* Prendre toute la largeur de l'écran */
-    }
-
-    .Filtres {
-        margin: 0;           /* Supprimer les marges inutiles */
-        padding: 0;          /* Supprimer les espaces internes */
-        font-size: 18px;
-        text-align: left;    /* Aligner du texte à gauche */
-    }
-
-    .Boutons_Filtres {
-        display: grid;
-        grid-template-columns: 1fr 1fr;   /* Deux boutons par ligne */
-        gap: 10px;                        /* Espacement entre les boutons */
-        width: 100%;                      /* Prendre toute la largeur de l'écran */
-    }
-
-    .B_Filtres1, .B_Filtres2, .B_Filtres3, .B_Filtres4 {
-        width: 100%;                      /* Les boutons occupent toute la largeur disponible */
-        height: 50px;                     /* Hauteur fixe des boutons */
-        justify-content: center;          /* Centrer le contenu */
-    }
 }
 
 
@@ -630,8 +440,271 @@ header {
 }
 
 
-/********** MEDIA QUERIES DU HEBERGEMENTS ET POPULAIRES **********/
-    /***** Pour les tablettes *****/
+/********** ACTIVITÉS A MARSEILLE **********/
+.Activites_Marseille {
+    display:flex;
+    flex-direction: column;
+    padding:30px 0;
+    margin: 35px 0;
+}
+
+.Activites_Marseille h2 {
+    font-size: 22px;
+    text-align: left;
+    margin:0 0 30px 0;
+    padding:0;
+}
+
+.Cartes_Activites {
+    display:flex;
+    gap:30px;
+    height: 439px;
+    overflow: visible;       /* Empêche les débordements visuels */
+}
+
+.activites_cards {
+    display:flex;
+    flex-direction: column;
+    border-radius:20px;
+    flex:1;
+}
+
+.activites_cards .card {
+    height:439px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding:0;
+}
+
+.activites_cards .card img {
+    width:100%;
+    height:380px;
+    object-fit: cover;
+    border-top-left-radius:20px;
+    border-top-right-radius:20px;
+}
+
+.activites_cards .card h3 {
+    padding: 0 19px;
+    font-size:16px;
+}
+
+.activites_cards .card:hover {     /* Quand on survole une carte */
+    transform: scale(1.05);        /* Zoom légèrement la carte (5% de sa taille) */
+}
+
+
+/********** FOOTER **********/
+footer {
+    display:flex;
+    justify-content:flex-start;
+    text-align: start;
+    width:100%;
+    background-color: #F2F2F2;
+}
+
+footer h2 {
+    font-size:18px;
+    white-space : nowrap;
+}
+
+footer ul {
+    line-height:2;
+    font-size:16px;
+    margin:0;
+    padding:0;
+}
+
+footer li {
+    list-style-type: none;
+    white-space : nowrap;
+}
+
+.A_Propos, .Nos_Hebergements, .Assistance {
+    width: calc(100%/3);
+    padding:20px 0 20px 30px;
+}
+
+
+/********** MEDIA QUERIES DU HEADER **********/
+@media screen and (max-width: 767.98px) {
+    html, body {
+        overflow-x: hidden;
+    }
+        
+    .HEADER {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items: center;
+        flex-shrink: 0;  /* Les éléments ne peuvent pas rétrécir même si l'espace est trop petit*/
+        }
+    
+    .HEADER img {
+        padding:30px 0;
+        width:100%;
+    }
+    
+    .Menu_Du_Site {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0;    /* Supprimer tout padding */
+        margin:0;      /* Supprimer les marges */
+        gap:0;
+    }
+    
+    .Bouton_Menu {
+        flex: 1;                /* Les boutons prennent 50% de la largeur */
+        text-align: center;     /* Centrer le texte dans les boutons */
+        padding:30px 0;
+        margin: 0; 
+        border-bottom: 3px solid #F2F2F2;   /* Bordure visible par défaut */
+    }
+    
+    .Bouton_Menu:hover {          /* Quand on passer avec la souris */
+        color: #0065FC;                
+        border-bottom-color: #0065FC; 
+        border-top: none;
+    }
+    
+    .Bouton_Menu:focus {          /* Quand on clique avec la souris */
+        color: #0065FC;             
+        border-bottom-color: #0065FC; 
+        border-top: none; 
+    }
+    
+    body {
+        width:100%;
+    }
+    
+    .main-container {
+        padding:0;
+    }
+    
+    main {
+        padding: 50px 20px 0 20px;
+        margin:0;
+    } 
+}
+
+
+/********** MEDIA QUERIES DU SLOGAN  **********/
+@media screen and (max-width: 767.98px) {    
+    .SLOGAN {
+        margin: 30px 0 0 0;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        white-space: normal;    /* Faire des retours à la ligne automatiquement */
+        display: block;         /* Assurer qu'il y a un retour à la ligne */
+    }
+
+    .Titre_Slogan {
+        word-break:keep-all;    /* Ne pas couper les mots aux retours à la ligne */
+    }
+
+    .P_Slogan {
+        word-break:keep-all;    /* Ne pas couper les mots aux retours à la ligne */
+    }
+}
+
+
+/********** MEDIA QUERIES DU FORMULAIRE DE RECHERCHE **********/
+@media screen and (max-width: 767.98px) {
+    .formulaire {
+        width: 100%;      /* Prend toute la largeur de l'écran sur mobile */
+        padding:35px 0;   /* Réduit les marges sur mobile */
+        margin:0;
+    }
+
+    .Saisie_et_Bouton {
+        flex-direction: row;     /* Garde les éléments en ligne */
+        width: 100%;             /* Adapte la largeur de la barre */
+    }
+
+    .Saisie_Recherche {
+        width: 100%;     /* La barre de recherche prend toute la largeur de l'écran */
+        padding: 0 20px;   /* Réduit l'espace à l'intérieur du champ de recherche */
+    }
+    
+    .Bouton_Recherche {
+        border-radius: 15px;       /* Arrondi complet aux 4 coins */
+        padding: 10px;             /* Réduit la taille du bouton */
+        justify-content: center;   /* Centre l'icône */
+        width:50px;
+        height:49px;
+    }
+
+    .Bouton_Recherche i {
+        display: inline-block;      /* Affiche l'icône */
+    }
+
+    .Bouton_Recherche .texte {
+        display: none;              /* Cache le texte */
+    }
+
+    .icone i {
+        box-shadow: none;
+    }
+}
+
+
+/********** MEDIA QUERIES DES FILTRES DE RECHERCHE **********/
+    /* POUR TABLETTES */
+@media (max-width: 1024px) {
+    .Filtres_Recherche {
+        flex-direction: column;    /* Disposer les éléments en colonne */
+        align-items: flex-start;   /* Aligner les éléments à gauche */
+    }
+    
+    .Filtres {
+        margin: 0 0 15px 0;       /* Ajouter un peu d'espace sous le texte "Filtres" */
+    }
+    
+    .Boutons_Filtres {
+        display: flex;         /* Garder les boutons en ligne */
+        flex-wrap: nowrap;     /* Interdir aux boutons de se décomposer en plusieurs lignes* */
+        gap: 10px;             /* Espacement entre les boutons */
+    }
+}
+
+    /* POUR MOBILES */
+@media screen and (max-width: 767.98px) {
+    .Filtres_Recherche {
+        display: flex;
+        flex-direction: column;     /* Aligner en colonne */
+        align-items: flex-start;    /* Aligner le contenu à gauche */
+        gap: 20px;                  /* Espacement entre chaque ligne */
+        width: 100%;                /* Prendre toute la largeur de l'écran */
+    }
+
+    .Filtres {
+        margin: 0;           /* Supprimer les marges inutiles */
+        padding: 0;          /* Supprimer les espaces internes */
+        font-size: 18px;
+        text-align: left;    /* Aligner du texte à gauche */
+    }
+
+    .Boutons_Filtres {
+        display: grid;
+        grid-template-columns: 1fr 1fr;   /* Deux boutons par ligne */
+        gap: 10px;                        /* Espacement entre les boutons */
+        width: 100%;                      /* Prendre toute la largeur de l'écran */
+    }
+
+    .B_Filtres1, .B_Filtres2, .B_Filtres3, .B_Filtres4 {
+        width: 100%;                      /* Les boutons occupent toute la largeur disponible */
+        height: 50px;                     /* Hauteur fixe des boutons */
+        justify-content: center;          /* Centrer le contenu */
+    }
+}
+
+
+/********** MEDIA QUERIES DES HÉBERGEMENTS ET POPULAIRES **********/
+    /* POUR TABLETTES */
 @media screen and (min-width:767.98px) and (max-width: 1025px) {
     .hebergements-and-populaires {
         flex-direction: column;      /* Empile les sections */
@@ -667,7 +740,7 @@ header {
     }
 }
 
-    /***** Pour les mobiles *****/
+    /* POUR MOBILES */
 @media screen and (max-width: 767.98px) {
     .hebergements-and-populaires {
         flex-direction: column;      /* Empile les sections */
@@ -728,62 +801,8 @@ header {
 }
 
 
-/********** ACTIVITÉS A MARSEILLE **********/
-.Activites_Marseille {
-    display:flex;
-    flex-direction: column;
-    padding:30px 0;
-    margin: 35px 0;
-}
-
-.Activites_Marseille h2 {
-    font-size: 22px;
-    text-align: left;
-    margin:0 0 30px 0;
-    padding:0;
-}
-
-.Cartes_Activites {
-    display:flex;
-    gap:30px;
-    height: 439px;
-    overflow: visible;       /* Empêche les débordements visuels */
-}
-
-.activites_cards {
-    display:flex;
-    flex-direction: column;
-    border-radius:20px;
-    flex:1;
-}
-
-.activites_cards .card {
-    height:439px;
-    border-radius: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    padding:0;
-}
-
-.activites_cards .card img {
-    width:100%;
-    height:380px;
-    object-fit: cover;
-    border-top-left-radius:20px;
-    border-top-right-radius:20px;
-}
-
-.activites_cards .card h3 {
-    padding: 0 19px;
-    font-size:16px;
-}
-
-.activites_cards .card:hover {     /* Quand on survole une carte */
-    transform: scale(1.05);        /* Zoom légèrement la carte (5% de sa taille) */
-}
-
-
 /********** MEDIA QUERIES DES ACTIVITÉS A MARSEILLE **********/
-    /***** Pour les tablettes *****/
+    /* POUR TABLETTES */
 @media screen and (min-width:767.98px) and (max-width: 1025px) {
     .Activites_Marseille {
         padding:30px;
@@ -808,7 +827,7 @@ header {
     }
 }
 
-    /***** Pour les mobiles *****/
+    /* POUR MOBILES */
 @media screen and (max-width: 767.98px) {
     .Activites_Marseille {
         padding:30px;
@@ -835,39 +854,7 @@ header {
 }
 
 
-/********** FOOTER **********/
-footer {
-    display:flex;
-    justify-content:flex-start;
-    text-align: start;
-    width:100%;
-    background-color: #F2F2F2;
-}
-
-footer h2 {
-    font-size:18px;
-    white-space : nowrap;
-}
-
-footer ul {
-    line-height:2;
-    font-size:16px;
-    margin:0;
-    padding:0;
-}
-
-footer li {
-    list-style-type: none;
-    white-space : nowrap;
-}
-
-.A_Propos, .Nos_Hebergements, .Assistance {
-    width: calc(100%/3);
-    padding:20px 0 20px 30px;
-}
-
-/********** MEDIA QUERIES DES ACTIVITÉS A MARSEILLE **********/
-    /***** Pour les mobiles *****/
+/********** MEDIA QUERIES DU FOOTER **********/
 @media screen and (max-width: 767.98px) {
     footer {
         flex-direction: column;
