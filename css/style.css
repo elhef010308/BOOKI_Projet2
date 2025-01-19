@@ -613,6 +613,14 @@ footer li {
 
 
 /********** MEDIA QUERIES DU FORMULAIRE DE RECHERCHE **********/
+    /* POUR TABLETTES */
+@media screen and (max-width: 1024px) {
+    .icone i {
+        box-shadow: none;
+    }
+}
+
+    /* POUR MOBILES */
 @media screen and (max-width: 767.98px) {
     .formulaire {
         width: 100%;      /* Prend toute la largeur de l'écran sur mobile */
