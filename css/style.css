@@ -72,20 +72,20 @@ header {
     margin:0 0 50px 0;    
 }
 
-.HEADER {
+.hea-der {
     display:flex;
     justify-content: space-between;   /* Espacement entre le logo et le menu */
     align-items: center;              /* Centrer verticalement les éléments */
 }
 
-.HEADER img {
+.hea-der img {
     max-width: 79px;       
     height: auto;          /* Préserver les proportions */
     position: relative;
     top: 20px;
 }
 
-.Menu_Du_Site {
+.menu-website {
     display:flex;
     flex-direction:row;
     gap:10px;
@@ -93,7 +93,7 @@ header {
     justify-content: right;
 }
 
-.Bouton_Menu {
+.button-menu {
     background-color:transparent;
     padding: 20px 10px 10px 10px;
     border: none;
@@ -106,12 +106,12 @@ header {
         /* La couleur change en 3s, la bordure du haut apparait en 3s*/
 }
 
-.Bouton_Menu:hover {              /* Quand on passer avec la souris */
+.button-menu:hover {              /* Quand on passer avec la souris */
     color: #0065FC;             /* Change la couleur du texte */
     border-top-color: #0065FC;  /* Change la couleur de la bordure */
 }
 
-.Bouton_Menu:focus {              /* Quand on clique avec la souris */
+.button-menu:focus {              /* Quand on clique avec la souris */
     color: #0065FC;             /* Change la couleur du texte */
     border-top-color: #0065FC;  /* Change la couleur de la bordure */
 }
@@ -119,21 +119,21 @@ header {
 
     /********** INFOS GROUPE **********/
 /***** SLOGAN *****/
-.SLOGAN {
+.slogan {
     line-height:1;
 }
 
-.Titre_Slogan {
+.slogan-title {
     font-size:22px;
 }
 
-.P_Slogan {
+.P-slogan {
     font-size:16px;
 }
 
 
 /***** FORMULAIRE DE RECHERCHE *****/
-.formulaire {
+.form {
     display:flex;
     flex-direction: row;
     align-items:center;
@@ -157,7 +157,7 @@ header {
     height:49px;
 } 
 
-.Saisie_et_Bouton {
+.input-and-button {
     display:flex;
     flex-direction:row;
     align-items:center;             /* Aligner verticalement */
@@ -165,7 +165,7 @@ header {
     border-radius : 0 15px 15px 0;
 }
 
-.Saisie_Recherche {
+.input-search {
     border: none;
     padding-left:15px;
     font-size: 18px;
@@ -177,13 +177,13 @@ header {
     outline: none;           /* Retire le contour par défaut */
 }
 
-.Barre_Recherche::placeholder {
+.x ::placeholder {
     color: gray;
     text-align: left;         /* Alignement du texte à gauche */
     padding-left:15px;
 }
 
-.Bouton_Recherche {
+.button-search {
     background-color:#0065FC;
     border: #0065FC solid 0.5px ;
     border-radius : 0 15px 15px 0;
@@ -197,23 +197,23 @@ header {
     height:49px;
 }
 
-.Bouton_Recherche i {
+.button-search i {
     display: none;                 /* Cacher l'icône par défaut */
     background-color:#0065FC;
 }
 
-.Bouton_Recherche .texte {
+.button-search .texte {
     display: inline;               /* Le texte est visible par défaut */
     font-size:18px;
 }
 
-.Bouton_Recherche:hover {
+.button-search:hover {
     background-color: #0052d4;   /* Couleur plus foncée au survol */
 }
 
 
 /***** FILTRES DE RECHERCHE *****/
-.Filtres_Recherche {
+.filters-search {
     height:auto;
     width: 100%;
     margin: 0 0 35px 0;
@@ -224,37 +224,37 @@ header {
     position:relative;
 }
 
-.Filtres {
+.filters {
     font-size:18px;
     margin: 0 15px 0 0;
     font-weight: 600;
 }
 
-.Boutons_Filtres {
+.buttons-filters {
     display:flex;
     justify-content:space-between;
     height:auto;
     gap:15px;
 }
 
-.B_Filtres1 {
+.B-filters1 {
     width:173px;
 }
 
-.B_Filtres2 {
+.B-filters2 {
     width:134px;
 }
 
-.B_Filtres3 {
+.B-filters3 {
     width:170px;
 }
 
-.B_Filtres4 {
+.B-filters4 {
     width:167px;
 
 }
 
-.B_Filtres1, .B_Filtres2, .B_Filtres3, .B_Filtres4 {
+.B-filters1, .B-filters2, .B-filters3, .B-filters4 {
     border:#dbdbdb 2.5px solid;
     background-color: white;
     border-radius:50px;
@@ -267,8 +267,8 @@ header {
     height: 50px;
 }
 
-.B_Filtres1:hover, .B_Filtres2:hover, .B_Filtres3:hover, .B_Filtres4:hover, 
-.B_Filtres1:focus, .B_Filtres2:focus, .B_Filtres3:focus, .B_Filtres4:focus {
+.B-filters1:hover, .B-filters2:hover, .B-filters3:hover, .B-filters4:hover, 
+.B-filters1:focus, .B-filters2:focus, .B-filters3:focus, .B-filters4:focus {
     background-color: #DEEBFF;
 }
 
@@ -532,7 +532,7 @@ footer li {
         overflow-x: hidden;
     }
         
-    .HEADER {
+    .hea-der {
         width:100%;
         height:auto;
         display:flex;
@@ -542,12 +542,12 @@ footer li {
         flex-shrink: 0;  /* Les éléments ne peuvent pas rétrécir même si l'espace est trop petit*/
         }
     
-    .HEADER img {
+    .hea-der img {
         padding:30px 0;
         width:100%;
     }
     
-    .Menu_Du_Site {
+    .menu-website {
         display: flex;
         justify-content: space-between;
         width: 100%;
@@ -556,7 +556,7 @@ footer li {
         gap:0;
     }
     
-    .Bouton_Menu {
+    .button-menu {
         flex: 1;                /* Les boutons prennent 50% de la largeur */
         text-align: center;     /* Centrer le texte dans les boutons */
         padding:30px 0;
@@ -564,13 +564,13 @@ footer li {
         border-bottom: 3px solid #F2F2F2;   /* Bordure visible par défaut */
     }
     
-    .Bouton_Menu:hover {          /* Quand on passer avec la souris */
+    .button-menu:hover {          /* Quand on passer avec la souris */
         color: #0065FC;                
         border-bottom-color: #0065FC; 
         border-top: none;
     }
     
-    .Bouton_Menu:focus {          /* Quand on clique avec la souris */
+    .button-menu:focus {          /* Quand on clique avec la souris */
         color: #0065FC;             
         border-bottom-color: #0065FC; 
         border-top: none; 
@@ -593,7 +593,7 @@ footer li {
 
 /********** MEDIA QUERIES DU SLOGAN  **********/
 @media screen and (max-width: 767.98px) {    
-    .SLOGAN {
+    .slogan {
         margin: 30px 0 0 0;
         display:flex;
         flex-direction: column;
@@ -602,11 +602,11 @@ footer li {
         display: block;         /* Assurer qu'il y a un retour à la ligne */
     }
 
-    .Titre_Slogan {
+    .slogan-title {
         word-break:keep-all;    /* Ne pas couper les mots aux retours à la ligne */
     }
 
-    .P_Slogan {
+    .P-slogan {
         word-break:keep-all;    /* Ne pas couper les mots aux retours à la ligne */
     }
 }
@@ -614,7 +614,7 @@ footer li {
 
 /********** MEDIA QUERIES DU FORMULAIRE DE RECHERCHE **********/
     /* POUR TABLETTES */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
     .icone i {
         box-shadow: none;
     }
@@ -622,23 +622,23 @@ footer li {
 
     /* POUR MOBILES */
 @media screen and (max-width: 767.98px) {
-    .formulaire {
+    .form {
         width: 100%;      /* Prend toute la largeur de l'écran sur mobile */
         padding:35px 0;   /* Réduit les marges sur mobile */
         margin:0;
     }
 
-    .Saisie_et_Bouton {
+    .input-and-button {
         flex-direction: row;     /* Garde les éléments en ligne */
         width: 100%;             /* Adapte la largeur de la barre */
     }
 
-    .Saisie_Recherche {
+    .input-search {
         width: 100%;     /* La barre de recherche prend toute la largeur de l'écran */
         padding: 0 20px;   /* Réduit l'espace à l'intérieur du champ de recherche */
     }
     
-    .Bouton_Recherche {
+    .button-search {
         border-radius: 15px;       /* Arrondi complet aux 4 coins */
         padding: 10px;             /* Réduit la taille du bouton */
         justify-content: center;   /* Centre l'icône */
@@ -646,11 +646,11 @@ footer li {
         height:49px;
     }
 
-    .Bouton_Recherche i {
+    .button-search i {
         display: inline-block;      /* Affiche l'icône */
     }
 
-    .Bouton_Recherche .texte {
+    .button-search .texte {
         display: none;              /* Cache le texte */
     }
 
@@ -663,16 +663,16 @@ footer li {
 /********** MEDIA QUERIES DES FILTRES DE RECHERCHE **********/
     /* POUR TABLETTES */
 @media (max-width: 1024px) {
-    .Filtres_Recherche {
+    .filters-search {
         flex-direction: column;    /* Disposer les éléments en colonne */
         align-items: flex-start;   /* Aligner les éléments à gauche */
     }
     
-    .Filtres {
+    .filters {
         margin: 0 0 15px 0;       /* Ajouter un peu d'espace sous le texte "Filtres" */
     }
     
-    .Boutons_Filtres {
+    .buttons-filters {
         display: flex;         /* Garder les boutons en ligne */
         flex-wrap: nowrap;     /* Interdir aux boutons de se décomposer en plusieurs lignes* */
         gap: 10px;             /* Espacement entre les boutons */
@@ -681,7 +681,7 @@ footer li {
 
     /* POUR MOBILES */
 @media screen and (max-width: 767.98px) {
-    .Filtres_Recherche {
+    .filters-search {
         display: flex;
         flex-direction: column;     /* Aligner en colonne */
         align-items: flex-start;    /* Aligner le contenu à gauche */
@@ -689,21 +689,21 @@ footer li {
         width: 100%;                /* Prendre toute la largeur de l'écran */
     }
 
-    .Filtres {
+    .filters {
         margin: 0;           /* Supprimer les marges inutiles */
         padding: 0;          /* Supprimer les espaces internes */
         font-size: 18px;
         text-align: left;    /* Aligner du texte à gauche */
     }
 
-    .Boutons_Filtres {
+    .buttons-filters {
         display: grid;
         grid-template-columns: 1fr 1fr;   /* Deux boutons par ligne */
         gap: 10px;                        /* Espacement entre les boutons */
         width: 100%;                      /* Prendre toute la largeur de l'écran */
     }
 
-    .B_Filtres1, .B_Filtres2, .B_Filtres3, .B_Filtres4 {
+    .B-filters1, .B-filters2, .B-filters3, .B-filters4 {
         width: 100%;                      /* Les boutons occupent toute la largeur disponible */
         height: 50px;                     /* Hauteur fixe des boutons */
         justify-content: center;          /* Centrer le contenu */
