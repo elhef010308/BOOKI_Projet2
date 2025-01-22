@@ -634,7 +634,7 @@ footer li {
     }
 
     .input-search {
-        width: 100%;     /* La barre de recherche prend toute la largeur de l'écran */
+        width: 100%;       /* La barre de recherche prend toute la largeur de l'écran */
         padding: 0 20px;   /* Réduit l'espace à l'intérieur du champ de recherche */
     }
     
