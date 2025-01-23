@@ -662,7 +662,7 @@ footer li {
 
 /********** MEDIA QUERIES DES FILTRES DE RECHERCHE **********/
     /* POUR TABLETTES */
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
     .filters-search {
         flex-direction: column;    /* Disposer les éléments en colonne */
         align-items: flex-start;   /* Aligner les éléments à gauche */
