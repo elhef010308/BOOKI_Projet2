@@ -75,7 +75,7 @@ header {
 .hea-der {
     display:flex;
     justify-content: space-between;   /* Espacement entre le logo et le menu */
-    align-items: center;              /* Centrer verticalement les éléments */
+    align-items: center;              /* Centrer les éléments */
 }
 
 .hea-der img {
@@ -148,7 +148,7 @@ header {
     display:flex;
     justify-content:center;
     align-items: center;
-    box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.4);   /* Ombre sous l'icone */
+    box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.4);   
     border: #F2F2F2 solid 0.5px;
     border-radius: 15px 0 0 15px;
     background-color: #F2F2F2;
@@ -160,7 +160,7 @@ header {
 .input-and-button {
     display:flex;
     flex-direction:row;
-    align-items:center;             /* Aligner verticalement */
+    align-items:center;             /* Aligner l'élément */
     border: #F2F2F2 solid 0.5px;
     border-radius : 0 15px 15px 0;
 }
@@ -174,7 +174,7 @@ header {
     color: black;
     font-weight: 700;
     text-align: left;        /* Alignement du texte à gauche */
-    outline: none;           /* Retire le contour par défaut */
+    outline: none;           
 }
 
 .x ::placeholder {
@@ -198,12 +198,12 @@ header {
 }
 
 .button-search i {
-    display: none;                 /* Cacher l'icône par défaut */
+    display: none;                
     background-color:#0065FC;
 }
 
 .button-search .texte {
-    display: inline;               /* Le texte est visible par défaut */
+    display: inline;               
     font-size:18px;
 }
 
@@ -385,7 +385,7 @@ header {
 }
 
 .card_hotel .card:hover {      /* Quand on survole une carte */
-    transform: scale(1.05);    /* Zoom légèrement la carte (5% de sa taille) */
+    transform: scale(1.05);    
 }
 
 
@@ -539,7 +539,7 @@ footer li {
         flex-direction:column;
         justify-content:center;
         align-items: center;
-        flex-shrink: 0;  /* Les éléments ne peuvent pas rétrécir même si l'espace est trop petit*/
+        flex-shrink: 0;        
         }
     
     .hea-der img {
@@ -585,7 +585,7 @@ footer li {
     }
     
     main {
-        padding: 50px 20px 0 20px;
+        padding: 50px 0 0 0;
         margin:0;
     } 
 }
@@ -595,19 +595,25 @@ footer li {
 @media screen and (max-width: 767.98px) {    
     .slogan {
         margin: 30px 0 0 0;
+        padding: 0 20px;
         display:flex;
         flex-direction: column;
         justify-content: center;
-        white-space: normal;    /* Faire des retours à la ligne automatiquement */
-        display: block;         /* Assurer qu'il y a un retour à la ligne */
+        white-space: normal;    
+        display: block;         
     }
 
     .slogan-title {
-        word-break:keep-all;    /* Ne pas couper les mots aux retours à la ligne */
+        word-break:keep-all;    
     }
 
     .P-slogan {
-        word-break:keep-all;    /* Ne pas couper les mots aux retours à la ligne */
+        word-break:keep-all;    
+    }
+
+    .Infobar {
+        width:90%;
+        padding: 0 20px;
     }
 }
 
@@ -623,9 +629,14 @@ footer li {
     /* POUR MOBILES */
 @media screen and (max-width: 767.98px) {
     .form {
-        width: 100%;      /* Prend toute la largeur de l'écran sur mobile */
+        width: 90%;      /* Prend toute la largeur de l'écran sur mobile */
         padding:35px 0;   /* Réduit les marges sur mobile */
         margin:0;
+    }
+
+    form {
+        display:flex;
+        justify-content:center;
     }
 
     .input-and-button {
@@ -674,8 +685,8 @@ footer li {
     
     .buttons-filters {
         display: flex;         /* Garder les boutons en ligne */
-        flex-wrap: nowrap;     /* Interdir aux boutons de se décomposer en plusieurs lignes* */
-        gap: 10px;             /* Espacement entre les boutons */
+        flex-wrap: nowrap;     
+        gap: 10px;             
     }
 }
 
@@ -691,22 +702,23 @@ footer li {
 
     .filters {
         margin: 0;           /* Supprimer les marges inutiles */
-        padding: 0;          /* Supprimer les espaces internes */
+        padding: 0 20px;         
         font-size: 18px;
         text-align: left;    /* Aligner du texte à gauche */
     }
 
     .buttons-filters {
         display: grid;
-        grid-template-columns: 1fr 1fr;   /* Deux boutons par ligne */
-        gap: 10px;                        /* Espacement entre les boutons */
-        width: 100%;                      /* Prendre toute la largeur de l'écran */
+        grid-template-columns: 1fr 1fr;   
+        gap: 10px;                        
+        width: 100%; 
+        padding: 0 0 0 10px;                   
     }
 
     .B-filters1, .B-filters2, .B-filters3, .B-filters4 {
-        width: 100%;                      /* Les boutons occupent toute la largeur disponible */
-        height: 50px;                     /* Hauteur fixe des boutons */
-        justify-content: center;          /* Centrer le contenu */
+        width: 90%;                     
+        height: 50px;                     
+        justify-content: center;         
     }
 }
 
@@ -751,10 +763,8 @@ footer li {
     /* POUR MOBILES */
 @media screen and (max-width: 767.98px) {
     .hebergements-and-populaires {
-        flex-direction: column;      /* Empile les sections */
-        margin-left: -20px;          /* Supprimer le padding de MAIN en version mobile */
-        margin-right: -20px;         /* Supprimer le padding de MAIN en version mobile */
-        width: calc(100% + 40px);    /* Ajuster les marges négatives */
+        flex-direction: column;      /* Empile les sections */      
+        width: calc(100% + 40px);    /* ATTENTION aux marges négatives */
     }
 
     .hebergements-and-populaires section {
@@ -771,7 +781,7 @@ footer li {
         background-color: transparent;
         order:2;
         flex-direction: column;
-        width: 100%;         /* Chaque section occupe toute la largeur */
+        width: 90%;         
         max-width: none;     /* Supprime la limite maximale pour les écrans plus petits */
         height:100%;
         max-height:2019.5px;
@@ -783,7 +793,7 @@ footer li {
         order:1;
         flex-direction: column;
         align-items: center;
-        width: 100%;        /* Chaque section occupe toute la largeur */
+        width: 90%;       
         max-width: none;    /* Supprime la limite maximale */
         margin-top: 35px;
         margin-bottom:15px;
@@ -839,12 +849,12 @@ footer li {
 @media screen and (max-width: 767.98px) {
     .Activites_Marseille {
         padding:30px;
-        margin:35px 0;
+        margin:35px 0 35px 15px;
     }
     
     .Cartes_Activites {
         flex-direction: column;
-        width: 100%;         /* Chaque section occupe toute la largeur */
+        width: 95%;         /* Chaque section occupe toute la largeur */
         max-width: none;     /* Supprime la limite maximale pour les écrans plus petits */
         margin:0;
         gap:15px;
